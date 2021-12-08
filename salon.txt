@@ -1,0 +1,36 @@
+Assume the following functionalities of the app :
+1. A salon owner can register his/her saloon on the application by providing basic details like
+1. Company name
+2. GSTIN
+3. PAN number
+4. Address
+5. Work schedule (days and hours of operation)
+6. Services they provide along with cost of each service and time taken to complete
+the service (Example : At saloon A, Haircut - 20 mins and INR 200, Shaving - 15
+mins and INR 100. At Saloon B, Haircut - 45 mins and INR 100 and Hair Wax -
+120 mins and INR 1000). Different saloons can provide different services.
+7. Each saloon also specifies the number of chairs they have available. If a
+saloon has 2 chairs, they can take 2 bookings for the same time slot.
+
+Example : if a saloon has 1 chair and receives a booking for a 1 hour Haircut
+service for 9 AM, this saloon is occupied from 9 am to 10 am and cannot take
+any booking for 9:30 AM as the chair will be occupied.
+
+However, let's say a saloon has 2 chairs and receives a booking for a 1 hour
+Haircut service for 9 AM, only one chair in this saloon is occupied from 9 am
+to 10 am and the other chair is available. So this saloon can take another
+booking for 9 am or 9:30 am as well.
+
+2. All services can only start at 0th or 30th minute of the hour. Example : 10 AM, 10:30 AM,
+11 AM, 11:30 AM ....
+
+Bookings cannot start at in between times, say 10:20 AM
+
+3. A customer can see/book services at available time slots for the same day only.
+
+Requirement:
+Primary requirement involves you to create the following :
+1. Create a Database Schema to reflect the above.
+2. Build JSON APIs for the following :
+1. For a particular saloon, and a selected service, list time slots available to book.
+2. Create a booking for a service at a business.
